@@ -1,0 +1,91 @@
+### Defaulet files ###
+Current working directory:
+/tmp/ex_week3
+Listing Files
+total 0
+### Creating Files and Folders ###
+Created an empty file newfile.txt
+Created a new folder newfolder
+### After creating Files and Folders###
+Current working directory:
+/tmp/ex_week3
+Listing of ALL Files, directory and sub directory
+.:
+total 12
+drwxrwxr-x  3 user user 4096  9월 13 17:56 .
+drwxrwxrwt 22 root root 4096  9월 13 17:56 ..
+-rw-rw-r--  1 user user    0  9월 13 17:56 newfile.txt
+drwxrwxr-x  2 user user 4096  9월 13 17:56 newfolder
+
+./newfolder:
+total 8
+drwxrwxr-x 2 user user 4096  9월 13 17:56 .
+drwxrwxr-x 3 user user 4096  9월 13 17:56 ..
+### File Operations ###
+Copied newfile.txt to newfolder/
+Renamed newfile.txt to renamedfile.txt
+Listed the contents of newfolder
+.
+..
+renamedfile.txt
+Change file rights
+Write in the file
+Searching within file.txt for 'search_term':
+This is a search_term in a file.
+Word Count for file.txt:
+ 1  7 33 file.txt
+### After File Operations ###
+Current working directory:
+/tmp/ex_week3
+Listing of ALL Files, directory and sub directory
+.:
+total 16
+drwxrwxr-x  3 user user 4096  9월 13 17:56 .
+drwxrwxrwt 22 root root 4096  9월 13 17:56 ..
+-rw-rw-r--  1 user user   33  9월 13 17:56 file.txt
+-rwxrwxr-x  1 user user    0  9월 13 17:56 newfile.txt
+drwxrwxr-x  2 user user 4096  9월 13 17:56 newfolder
+
+./newfolder:
+total 8
+drwxrwxr-x 2 user user 4096  9월 13 17:56 .
+drwxrwxr-x 3 user user 4096  9월 13 17:56 ..
+-rw-rw-r-- 1 user user    0  9월 13 17:56 renamedfile.txt
+### System Monitoring ###
+Showing Disk Usage:
+Filesystem      Size  Used Avail Use% Mounted on
+udev            1.9G     0  1.9G   0% /dev
+tmpfs           382M  1.4M  381M   1% /run
+/dev/sda5       9.3G  8.7G  154M  99% /
+tmpfs           1.9G   25M  1.9G   2% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           1.9G     0  1.9G   0% /sys/fs/cgroup
+/dev/loop0      347M  347M     0 100% /snap/gnome-3-38-2004/119
+/dev/loop2       64M   64M     0 100% /snap/core20/1828
+/dev/loop3       92M   92M     0 100% /snap/gtk-common-themes/1535
+/dev/loop1      128K  128K     0 100% /snap/bare/5
+/dev/loop4       46M   46M     0 100% /snap/snap-store/638
+/dev/loop5       50M   50M     0 100% /snap/snapd/18357
+/dev/sda1       511M  4.0K  511M   1% /boot/efi
+tmpfs           382M   52K  382M   1% /run/user/1000
+/dev/loop6      304M  304M     0 100% /snap/code/139
+Showing somme current processes
+    PID TTY          TIME CMD
+   8628 pts/2    00:00:00 zsh
+   9269 pts/2    00:00:00 ex_1.sh
+   9283 pts/2    00:00:00 ps
+Ping google.com and his dns:
+PING google.com (172.217.174.110) 56(84) bytes of data.
+64 bytes from nrt12s28-in-f14.1e100.net (172.217.174.110): icmp_seq=1 ttl=63 time=35.1 ms
+64 bytes from nrt12s28-in-f14.1e100.net (172.217.174.110): icmp_seq=2 ttl=63 time=47.1 ms
+
+--- google.com ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1002ms
+rtt min/avg/max/mdev = 35.056/41.093/47.131/6.037 ms
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=63 time=33.2 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=63 time=32.3 ms
+
+--- 8.8.8.8 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 32.305/32.767/33.230/0.462 ms
