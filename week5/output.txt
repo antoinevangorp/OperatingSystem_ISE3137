@@ -1,0 +1,521 @@
+================ Server Health Checkup ================
+------ Checking Running Processes ------
+1. Processes consuming more than 10% CPU:
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+princes+   43251 21.1  0.3 34269724 62828 ?      Sl   Sep22 1535:47 /opt/google/chrome/chrome --type=gpu-process --crashpad-handler-pid=4079 --enable-crash-reporter=9fd8d93b-f245-4077-b97e-38334d95cf74, --change-stack-guard-on-fork=enable --gpu-preferences=WAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAAAAAA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAGAAAAAAAAAAYAAAAAAAAAAgAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --use-gl=angle --use-angle=swiftshader-webgl --shared-files --field-trial-handle=0,i,6794337550036792690,9735490090944784148,262144
+princes+  277394  8.9  4.6 3492048 745912 ?      Sl   Sep26  82:47 /snap/firefox/3131/usr/lib/firefox/firefox -contentproc -childID 2564 -isForBrowser -prefsLen 33233 -prefMapSize 235864 -jsInitLen 235824 -parentBuildID 20230912072954 -appDir /snap/firefox/3131/usr/lib/firefox/browser {24c97727-402a-4f58-bf9a-92c5e77d4994} 68504 true tab
+princes+  412759  6.8  1.4 1190017752 238188 ?   Sl   14:28   1:48 /snap/code/140/usr/share/code/code --type=renderer --crashpad-handler-pid=412720 --enable-crash-reporter=53a79a85-3330-42a4-9aff-d4dddd106c8d,no_channel --user-data-dir=/home/princesse/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --bypasscsp-schemes --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --streaming-schemes --app-path=/snap/code/140/usr/share/code/resources/app --enable-sandbox --enable-blink-features=HighlightAPI --first-renderer-process --no-sandbox --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=4 --time-ticks-at-unix-epoch=-1695466258333555 --launch-time-ticks=326232378216 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,12019257190818824263,2141830349127015410,262144 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --vscode-window-config=vscode:e937bc20-7ab2-44f7-be26-556f77bc85d6
+princes+  355425  4.3  1.7 1192882552 289720 ?   Sl   10:23  11:41 /snap/discord/156/usr/share/discord/Discord --type=renderer --crashpad-handler-pid=355344 --enable-crash-reporter=7f46c84c-503a-41fb-b8b2-c41de505915f,no_channel --user-data-dir=/home/princesse/snap/discord/156/.config/discord --standard-schemes --secure-schemes=disclip --bypasscsp-schemes --cors-schemes --fetch-schemes=disclip --service-worker-schemes --streaming-schemes --app-path=/snap/discord/156/usr/share/discord/resources/app.asar --no-sandbox --no-zygote --disable-seccomp-filter-sandbox --no-sandbox --autoplay-policy=no-user-gesture-required --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=5 --time-ticks-at-unix-epoch=-1695465219137581 --launch-time-ticks=312586828807 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,2036758197828479905,5085500093560912154,131072 --disable-features=HardwareMediaKeyHandling,MediaSessionService,SpareRendererForSitePerProcess,WinRetrieveSuggestionsOnlyOnDemand --enable-node-leakage-in-renderers
+2. List all running 'java' processes:
+root      417283  0.0  0.0   9556  2312 pts/2    S+   14:54   0:00 grep java
+3. List all running 'http' processes:
+princes+    4079  0.0  0.0 33602676  64 ?        Sl   Sep20   0:00 /opt/google/chrome/chrome_crashpad_handler --monitor-self --monitor-self-annotation=ptype=crashpad-handler --database=/home/princesse/.config/google-chrome/Crash Reports --metrics-dir=/home/princesse/.config/google-chrome --url=https://clients2.google.com/cr/report --annotation=channel= --annotation=lsb-release=Ubuntu 22.04.3 LTS --annotation=plat=Linux --annotation=prod=Chrome_Linux --annotation=ver=117.0.5938.88 --initial-client-fd=5 --shared-client-connection
+princes+    4081  0.0  0.0 33567784  24 ?        Sl   Sep20   0:00 /opt/google/chrome/chrome_crashpad_handler --no-periodic-tasks --monitor-self-annotation=ptype=crashpad-handler --database=/home/princesse/.config/google-chrome/Crash Reports --url=https://clients2.google.com/cr/report --annotation=channel= --annotation=lsb-release=Ubuntu 22.04.3 LTS --annotation=plat=Linux --annotation=prod=Chrome_Linux --annotation=ver=117.0.5938.88 --initial-client-fd=4 --shared-client-connection
+princes+  260338  0.0  0.0 442312 10144 ?        Sl   Sep26   0:00 /usr/libexec/gvfsd-http --spawner :1.2 /org/gtk/gvfs/exec_spaw/5
+princes+  355344  0.0  0.0 33575836 1208 ?       Sl   10:23   0:00 /snap/discord/156/usr/share/discord/chrome_crashpad_handler --monitor-self-annotation=ptype=crashpad-handler --no-rate-limit --database=/home/princesse/snap/discord/156/.config/discord/Crashpad --url=https://f.a.k/e --annotation=_productName=discord --annotation=_version=0.0.29 --annotation=lsb-release=Ubuntu Core 22 --annotation=plat=Linux --annotation=prod=Electron --annotation=ver=22.3.12 --initial-client-fd=45 --shared-client-connection
+root      417285  0.0  0.0   9556  2316 pts/2    S+   14:54   0:00 grep http
+4. List all running 'mysql' processes:
+root      417287  0.0  0.0   9556  2556 pts/2    S+   14:54   0:00 grep mysql
+5. Total number of running processes:
+402
+------ Checking CPU Utilization ------
+1. CPU utilization of critical processes:
+2. Average CPU load in the last minute:
+1,59,
+3. CPU info:
+Architecture:                       x86_64
+CPU op-mode(s):                     32-bit, 64-bit
+Address sizes:                      39 bits physical, 48 bits virtual
+Byte Order:                         Little Endian
+CPU(s):                             8
+On-line CPU(s) list:                0-7
+Vendor ID:                          GenuineIntel
+Model name:                         Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz
+CPU family:                         6
+Model:                              126
+Thread(s) per core:                 2
+Core(s) per socket:                 4
+Socket(s):                          1
+Stepping:                           5
+CPU max MHz:                        3900,0000
+CPU min MHz:                        400,0000
+BogoMIPS:                           2995.20
+Flags:                              fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves split_lock_detect dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm md_clear flush_l1d arch_capabilities
+Virtualization:                     VT-x
+L1d cache:                          192 KiB (4 instances)
+L1i cache:                          128 KiB (4 instances)
+L2 cache:                           2 MiB (4 instances)
+L3 cache:                           8 MiB (1 instance)
+NUMA node(s):                       1
+NUMA node0 CPU(s):                  0-7
+Vulnerability Gather data sampling: Mitigation; Microcode
+Vulnerability Itlb multihit:        KVM: Mitigation: VMX disabled
+Vulnerability L1tf:                 Not affected
+Vulnerability Mds:                  Not affected
+Vulnerability Meltdown:             Not affected
+Vulnerability Mmio stale data:      Mitigation; Clear CPU buffers; SMT vulnerable
+Vulnerability Retbleed:             Mitigation; Enhanced IBRS
+Vulnerability Spec store bypass:    Mitigation; Speculative Store Bypass disabled via prctl and seccomp
+Vulnerability Spectre v1:           Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:           Mitigation; Enhanced IBRS, IBPB conditional, RSB filling, PBRSB-eIBRS SW sequence
+Vulnerability Srbds:                Mitigation; Microcode
+Vulnerability Tsx async abort:      Not affected
+4. Top 5 CPU-consuming users:
+%Cpu(s):  4,2 us,  4,2 sy,  0,0 ni, 91,5 id,  0,0 wa,  0,0 hi,  0,0 si,  0,0 st
+5. CPU core count:
+8
+------ Checking Memory Utilization ------
+1. Freeing up cache:
+2. Display free memory:
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi        10Gi       4,0Gi       204Mi       1,3Gi       4,7Gi
+Swap:          2,0Gi       1,7Gi       323Mi
+3. Display swap usage:
+NAME      TYPE SIZE USED PRIO
+/swapfile file   2G 1,7G   -2
+4. Top 5 memory-consuming processes:
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+princes+   68504  3.0  5.2 5056248 840112 ?      Sl   Sep23 181:23 /snap/firefox/3131/usr/lib/firefox/firefox
+princes+  277394  8.9  4.6 3492048 745912 ?      Sl   Sep26  82:47 /snap/firefox/3131/usr/lib/firefox/firefox -contentproc -childID 2564 -isForBrowser -prefsLen 33233 -prefMapSize 235864 -jsInitLen 235824 -parentBuildID 20230912072954 -appDir /snap/firefox/3131/usr/lib/firefox/browser {24c97727-402a-4f58-bf9a-92c5e77d4994} 68504 true tab
+princes+  265619  1.2  3.6 3406008 596488 ?      Sl   Sep26  13:48 /snap/firefox/3131/usr/lib/firefox/firefox -contentproc -childID 2420 -isForBrowser -prefsLen 33233 -prefMapSize 235864 -jsInitLen 235824 -parentBuildID 20230912072954 -appDir /snap/firefox/3131/usr/lib/firefox/browser {247ea0f7-24d3-46b6-acfc-92dc91ee1a78} 68504 true tab
+princes+    2743  1.5  3.5 4985524 567948 ?      Ssl  Sep20 169:03 /usr/bin/gnome-shell
+5. Available memory in megabytes:
+4788
+------ Checking Zombie Processes ------
+1. Killing zombie processes:
+2. List all zombie processes:
+3. Count of zombie processes:
+0
+4. Parent processes of zombies:
+5. User owning zombie processes:
+------ Checking Load Average ------
+1. Current load average:
+ 14:54:21 up 7 days, 12:41,  2 users,  load average: 1,59, 1,33, 1,25
+2. Load average of the last 5 minutes:
+1,33,
+3. Load average of the last 15 minutes:
+1,25
+4. Number of currently running processes:
+2
+5. Number of users currently logged in:
+days,
+------ Checking Disk/SAN/NAS Utilization ------
+1. Disk I/O statistics:
+Linux 5.15.0-83-generic (princess) 	2023-09-27 	_x86_64_	(8 CPU)
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+          44,93    0,09    9,87    0,09    0,00   45,02
+
+Device             tps    kB_read/s    kB_wrtn/s    kB_dscd/s    kB_read    kB_wrtn    kB_dscd
+loop0             0,00         0,00         0,00         0,00         33          0          0
+loop1             0,00         0,00         0,00         0,00        380          0          0
+loop10            0,02         0,75         0,00         0,00     485242          0          0
+loop11            0,00         0,00         0,00         0,00       1101          0          0
+loop12            0,07         4,16         0,00         0,00    2703645          0          0
+loop13            0,00         0,00         0,00         0,00       1104          0          0
+loop14            0,13         7,76         0,00         0,00    5048504          0          0
+loop15            0,00         0,01         0,00         0,00       3944          0          0
+loop16            0,00         0,00         0,00         0,00       1111          0          0
+loop17            0,00         0,00         0,00         0,00       1784          0          0
+loop18            0,00         0,00         0,00         0,00       1115          0          0
+loop19            0,01         0,17         0,00         0,00     110599          0          0
+loop2             0,00         0,00         0,00         0,00       2769          0          0
+loop20            0,00         0,00         0,00         0,00       1137          0          0
+loop21            0,01         0,27         0,00         0,00     172947          0          0
+loop22            0,00         0,00         0,00         0,00        151          0          0
+loop23            0,00         0,00         0,00         0,00        165          0          0
+loop24            0,00         0,00         0,00         0,00       1105          0          0
+loop25            0,01         0,02         0,00         0,00      10180          0          0
+loop26            0,00         0,00         0,00         0,00       1117          0          0
+loop27            0,03         1,36         0,00         0,00     886744          0          0
+loop28            0,00         0,00         0,00         0,00       1141          0          0
+loop29            0,07         2,50         0,00         0,00    1624600          0          0
+loop3             0,00         0,00         0,00         0,00       1104          0          0
+loop30            0,03         0,56         0,00         0,00     364556          0          0
+loop31            0,00         0,00         0,00         0,00       1156          0          0
+loop32            0,00         0,00         0,00         0,00        383          0          0
+loop33            0,00         0,01         0,00         0,00       9227          0          0
+loop34            0,00         0,00         0,00         0,00        379          0          0
+loop35            0,02         1,00         0,00         0,00     647703          0          0
+loop36            0,00         0,00         0,00         0,00         86          0          0
+loop37            0,00         0,00         0,00         0,00        506          0          0
+loop38            0,00         0,00         0,00         0,00       1105          0          0
+loop39            0,05         2,98         0,00         0,00    1939692          0          0
+loop4             0,10         5,16         0,00         0,00    3356231          0          0
+loop40            0,00         0,00         0,00         0,00       1106          0          0
+loop41            0,01         0,35         0,00         0,00     229566          0          0
+loop42            0,01         0,20         0,00         0,00     131883          0          0
+loop5             0,00         0,00         0,00         0,00        381          0          0
+loop6             0,00         0,08         0,00         0,00      53782          0          0
+loop7             0,00         0,00         0,00         0,00        381          0          0
+loop8             0,02         0,80         0,00         0,00     523085          0          0
+loop9             0,00         0,00         0,00         0,00       1108          0          0
+nvme0n1          16,70       148,89       238,96      1158,46   96852524  155442732  753586648
+
+
+2. Disk usage:
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           1,6G  3,0M  1,6G   1% /run
+/dev/nvme0n1p2  938G  221G  670G  25% /
+tmpfs           7,8G  110M  7,6G   2% /dev/shm
+tmpfs           5,0M  4,0K  5,0M   1% /run/lock
+/dev/nvme0n1p1  511M  6,1M  505M   2% /boot/efi
+tmpfs           1,6G   84K  1,6G   1% /run/user/121
+tmpfs           1,6G  4,6M  1,6G   1% /run/user/1000
+3. Inode usage:
+Filesystem       Inodes   IUsed    IFree IUse% Mounted on
+tmpfs           2018859    1622  2017237    1% /run
+/dev/nvme0n1p2 62480384 2357970 60122414    4% /
+tmpfs           2018859     376  2018483    1% /dev/shm
+tmpfs           2018859       4  2018855    1% /run/lock
+/dev/nvme0n1p1        0       0        0     - /boot/efi
+tmpfs            403771      92   403679    1% /run/user/121
+tmpfs            403771     205   403566    1% /run/user/1000
+4. List mounted filesystems:
+sysfs                                                   on  /sys                                         type  sysfs            (rw,nosuid,nodev,noexec,relatime)
+proc                                                    on  /proc                                        type  proc             (rw,nosuid,nodev,noexec,relatime)
+udev                                                    on  /dev                                         type  devtmpfs         (rw,nosuid,relatime,size=8038936k,nr_inodes=2009734,mode=755,inode64)
+devpts                                                  on  /dev/pts                                     type  devpts           (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)
+tmpfs                                                   on  /run                                         type  tmpfs            (rw,nosuid,nodev,noexec,relatime,size=1615088k,mode=755,inode64)
+/dev/nvme0n1p2                                          on  /                                            type  ext4             (rw,relatime,errors=remount-ro)
+securityfs                                              on  /sys/kernel/security                         type  securityfs       (rw,nosuid,nodev,noexec,relatime)
+tmpfs                                                   on  /dev/shm                                     type  tmpfs            (rw,nosuid,nodev,inode64)
+tmpfs                                                   on  /run/lock                                    type  tmpfs            (rw,nosuid,nodev,noexec,relatime,size=5120k,inode64)
+cgroup2                                                 on  /sys/fs/cgroup                               type  cgroup2          (rw,nosuid,nodev,noexec,relatime)
+pstore                                                  on  /sys/fs/pstore                               type  pstore           (rw,nosuid,nodev,noexec,relatime)
+efivarfs                                                on  /sys/firmware/efi/efivars                    type  efivarfs         (rw,nosuid,nodev,noexec,relatime)
+bpf                                                     on  /sys/fs/bpf                                  type  bpf              (rw,nosuid,nodev,noexec,relatime,mode=700)
+systemd-1                                               on  /proc/sys/fs/binfmt_misc                     type  autofs           (rw,relatime,fd=29,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=22859)
+hugetlbfs                                               on  /dev/hugepages                               type  hugetlbfs        (rw,relatime,pagesize=2M)
+mqueue                                                  on  /dev/mqueue                                  type  mqueue           (rw,nosuid,nodev,noexec,relatime)
+debugfs                                                 on  /sys/kernel/debug                            type  debugfs          (rw,nosuid,nodev,noexec,relatime)
+tracefs                                                 on  /sys/kernel/tracing                          type  tracefs          (rw,nosuid,nodev,noexec,relatime)
+fusectl                                                 on  /sys/fs/fuse/connections                     type  fusectl          (rw,nosuid,nodev,noexec,relatime)
+configfs                                                on  /sys/kernel/config                           type  configfs         (rw,nosuid,nodev,noexec,relatime)
+tracefs                                                 on  /sys/kernel/debug/tracing                    type  tracefs          (rw,nosuid,nodev,noexec,relatime)
+none                                                    on  /run/credentials/systemd-sysusers.service    type  ramfs            (ro,nosuid,nodev,noexec,relatime,mode=700)
+/var/lib/snapd/snaps/bare_5.snap                        on  /snap/bare/5                                 type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/chromium-ffmpeg_34.snap            on  /snap/chromium-ffmpeg/34                     type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/chromium-ffmpeg_33.snap            on  /snap/chromium-ffmpeg/33                     type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/code_139.snap                      on  /snap/code/139                               type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/code_140.snap                      on  /snap/code/140                               type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/core18_2785.snap                   on  /snap/core18/2785                            type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/core20_1974.snap                   on  /snap/core20/1974                            type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/core18_2790.snap                   on  /snap/core18/2790                            type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/core20_2015.snap                   on  /snap/core20/2015                            type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/core22_864.snap                    on  /snap/core22/864                             type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/core22_858.snap                    on  /snap/core22/858                             type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/firefox_3131.snap                  on  /snap/firefox/3131                           type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/discord_155.snap                   on  /snap/discord/155                            type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/discord_156.snap                   on  /snap/discord/156                            type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/firefox_3068.snap                  on  /snap/firefox/3068                           type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/gnome-3-28-1804_198.snap           on  /snap/gnome-3-28-1804/198                    type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/gnome-3-34-1804_90.snap            on  /snap/gnome-3-34-1804/90                     type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/gnome-3-34-1804_93.snap            on  /snap/gnome-3-34-1804/93                     type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/gnome-3-38-2004_140.snap           on  /snap/gnome-3-38-2004/140                    type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/gnome-system-monitor_181.snap      on  /snap/gnome-system-monitor/181               type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/gnome-42-2204_126.snap             on  /snap/gnome-42-2204/126                      type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/gnome-3-38-2004_143.snap           on  /snap/gnome-3-38-2004/143                    type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/gnome-system-monitor_184.snap      on  /snap/gnome-system-monitor/184               type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/gtk-common-themes_1515.snap        on  /snap/gtk-common-themes/1515                 type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/gtk-common-themes_1535.snap        on  /snap/gtk-common-themes/1535                 type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/opera_259.snap                     on  /snap/opera/259                              type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/opera_260.snap                     on  /snap/opera/260                              type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/slack_95.snap                      on  /snap/slack/95                               type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/snap-store_638.snap                on  /snap/snap-store/638                         type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/snap-store_959.snap                on  /snap/snap-store/959                         type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/snapd_19993.snap                   on  /snap/snapd/19993                            type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/snapd_20092.snap                   on  /snap/snapd/20092                            type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/snapd-desktop-integration_57.snap  on  /snap/snapd-desktop-integration/57           type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/snapd-desktop-integration_83.snap  on  /snap/snapd-desktop-integration/83           type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/spotify_67.snap                    on  /snap/spotify/67                             type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/spotify_68.snap                    on  /snap/spotify/68                             type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/zoom-client_208.snap               on  /snap/zoom-client/208                        type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/dev/nvme0n1p2                                          on  /var/snap/firefox/common/host-hunspell       type  ext4             (ro,noexec,noatime,errors=remount-ro)
+/var/lib/snapd/snaps/zoom-client_210.snap               on  /snap/zoom-client/210                        type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/dev/nvme0n1p1                                          on  /boot/efi                                    type  vfat             (rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+binfmt_misc                                             on  /proc/sys/fs/binfmt_misc                     type  binfmt_misc      (rw,nosuid,nodev,noexec,relatime)
+tmpfs                                                   on  /run/user/121                                type  tmpfs            (rw,nosuid,nodev,relatime,size=1615084k,nr_inodes=403771,mode=700,uid=121,gid=125,inode64)
+gvfsd-fuse                                              on  /run/user/121/gvfs                           type  fuse.gvfsd-fuse  (rw,nosuid,nodev,relatime,user_id=121,group_id=125)
+portal                                                  on  /run/user/121/doc                            type  fuse.portal      (rw,nosuid,nodev,relatime,user_id=121,group_id=125)
+tmpfs                                                   on  /run/snapd/ns                                type  tmpfs            (rw,nosuid,nodev,noexec,relatime,size=1615088k,mode=755,inode64)
+nsfs                                                    on  /run/snapd/ns/snapd-desktop-integration.mnt  type  nsfs             (rw)
+tmpfs                                                   on  /run/user/1000                               type  tmpfs            (rw,nosuid,nodev,relatime,size=1615084k,nr_inodes=403771,mode=700,uid=1000,gid=1000,inode64)
+gvfsd-fuse                                              on  /run/user/1000/gvfs                          type  fuse.gvfsd-fuse  (rw,nosuid,nodev,relatime,user_id=1000,group_id=1000)
+portal                                                  on  /run/user/1000/doc                           type  fuse.portal      (rw,nosuid,nodev,relatime,user_id=1000,group_id=1000)
+nsfs                                                    on  /run/snapd/ns/snap-store.mnt                 type  nsfs             (rw)
+nsfs                                                    on  /run/snapd/ns/firefox.mnt                    type  nsfs             (rw)
+nsfs                                                    on  /run/snapd/ns/discord.mnt                    type  nsfs             (rw)
+nsfs                                                    on  /run/snapd/ns/postman.mnt                    type  nsfs             (rw)
+nsfs                                                    on  /run/snapd/ns/opera.mnt                      type  nsfs             (rw)
+/var/lib/snapd/snaps/slack_98.snap                      on  /snap/slack/98                               type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+nsfs                                                    on  /run/snapd/ns/slack.mnt                      type  nsfs             (rw)
+/var/lib/snapd/snaps/gnome-42-2204_132.snap             on  /snap/gnome-42-2204/132                      type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/postman_223.snap                   on  /snap/postman/223                            type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+nsfs                                                    on  /run/snapd/ns/spotify.mnt                    type  nsfs             (rw)
+nsfs                                                    on  /run/snapd/ns/zoom-client.mnt                type  nsfs             (rw)
+/var/lib/snapd/snaps/postman_225.snap                   on  /snap/postman/225                            type  squashfs         (ro,nodev,relatime,errors=continue,x-gdu.hide)
+5. Display disk partitions and sizes:
+Disk /dev/loop0: 4 KiB, 4096 bytes, 8 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop1: 23,09 MiB, 24211456 bytes, 47288 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop2: 9,41 MiB, 9871360 bytes, 19280 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop3: 303,05 MiB, 317767680 bytes, 620640 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop4: 303,04 MiB, 317763584 bytes, 620632 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop5: 55,66 MiB, 58368000 bytes, 114000 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop6: 55,66 MiB, 58363904 bytes, 113992 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop7: 63,45 MiB, 66531328 bytes, 129944 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/nvme0n1: 953,87 GiB, 1024209543168 bytes, 2000409264 sectors
+Disk model: SAMSUNG MZVLQ1T0HALB-000H1              
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: C848E4ED-EA82-433A-A410-051E0AE4AB9C
+
+Device           Start        End    Sectors   Size Type
+/dev/nvme0n1p1    2048    1050623    1048576   512M EFI System
+/dev/nvme0n1p2 1050624 2000408575 1999357952 953,4G Linux filesystem
+
+
+Disk /dev/loop8: 63,46 MiB, 66547712 bytes, 129976 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop9: 73,88 MiB, 77463552 bytes, 151296 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop10: 73,9 MiB, 77492224 bytes, 151352 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop11: 97,29 MiB, 102014976 bytes, 199248 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop12: 97,29 MiB, 102014976 bytes, 199248 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop13: 236,85 MiB, 248352768 bytes, 485064 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop14: 236,91 MiB, 248418304 bytes, 485192 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop15: 164,82 MiB, 172830720 bytes, 337560 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop16: 218,39 MiB, 228999168 bytes, 447264 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop17: 218,39 MiB, 228999168 bytes, 447264 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop18: 349,69 MiB, 366678016 bytes, 716168 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop19: 349,7 MiB, 366682112 bytes, 716176 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop20: 166,46 MiB, 174551040 bytes, 340920 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop21: 485,52 MiB, 509100032 bytes, 994336 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop22: 1,49 MiB, 1560576 bytes, 3048 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop23: 1,48 MiB, 1552384 bytes, 3032 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop24: 65,1 MiB, 68259840 bytes, 133320 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop25: 91,69 MiB, 96141312 bytes, 187776 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop26: 185,23 MiB, 194228224 bytes, 379352 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop27: 185,23 MiB, 194224128 bytes, 379344 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop28: 115,71 MiB, 121327616 bytes, 236968 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop29: 166,46 MiB, 174551040 bytes, 340920 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop30: 496,88 MiB, 521015296 bytes, 1017608 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop31: 115,8 MiB, 121425920 bytes, 237160 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop32: 45,93 MiB, 48160768 bytes, 94064 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop33: 12,32 MiB, 12922880 bytes, 25240 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop34: 40,84 MiB, 42827776 bytes, 83648 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop35: 40,84 MiB, 42827776 bytes, 83648 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop36: 428 KiB, 438272 bytes, 856 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop37: 452 KiB, 462848 bytes, 904 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop38: 157,81 MiB, 165478400 bytes, 323200 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop39: 158,54 MiB, 166240256 bytes, 324688 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop40: 365,34 MiB, 383086592 bytes, 748216 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop41: 365,51 MiB, 383262720 bytes, 748560 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
